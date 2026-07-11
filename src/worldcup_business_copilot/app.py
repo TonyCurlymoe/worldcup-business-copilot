@@ -39,11 +39,34 @@ def main() -> None:
 
         st.markdown("### Match Center")
 
-        for _, match in matches_df.iterrows():
+        groups = ["All Groups"] + sorted(matches_df["stage"].unique().tolist())
+        selected_group = st.selectbox("Filter by group", groups)
+
+        if selected_group == "All Groups":
+            filtered_matches = matches_df
+        else:
+            filtered_matches = matches_df[matches_df["stage"] == selected_group]
+
+
+        for _, match in filtered_matches.iterrows():
+            team_a = match["team_a"]
+            team_b = match["team_b"]
+            winner = match["winner"]
+
+            if team_a == winner:
+                team_a_display = f"🏆 {team_a}"
+                team_b_display = team_b
+            elif team_b == winner:
+                team_a_display = team_a
+                team_b_display = f"🏆 {team_b}"
+            else:
+                team_a_display = team_a
+                team_b_display = team_b
+
             col1, col2, col3 = st.columns([2, 1, 2])
 
             with col1:
-                st.markdown(f"**{match['team_a']}**")
+                st.markdown(f"**{team_a_display}**")
 
             with col2:
                 st.markdown(
@@ -52,7 +75,7 @@ def main() -> None:
                 )
 
             with col3:
-                st.markdown(f"**{match['team_b']}**")
+                st.markdown(f"**{team_b_display}**")
 
             st.caption(f"{match['stage']} · Winner: {match['winner']} · Date: {match['date']}")
             st.divider()
