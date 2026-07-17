@@ -34,3 +34,6 @@ def get_team_profile(df: pd.DataFrame, team: str) -> dict:
     if matched.empty:
         raise ValueError(f"Team not found: {team}")
     return matched.iloc[0].to_dict()
+
+def load_historical_world_cup_data(path: str) -> pd.DataFrame:
+    return pd.read_csv(path)
