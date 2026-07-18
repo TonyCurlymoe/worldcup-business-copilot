@@ -1,190 +1,94 @@
-# 🏆 World Cup Business Intelligence Copilot
+# ⚽ World Cup Business Intelligence Copilot
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-Cloud-red)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
+![Version](https://img.shields.io/badge/Version-v1.0.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-<p align="center">
-
-AI-powered Business Intelligence Dashboard for evaluating FIFA World Cup teams' commercial value, sponsorship opportunities, and historical tournament performance.
-
-Built with **Python**, **Streamlit**, **Plotly**, **Pandas**, and optional **OpenAI API** integration.
-
-</p>
+An AI-powered business intelligence platform for evaluating FIFA World Cup teams based on commercial value, sponsorship opportunities, historical performance, and AI-generated business insights.
 
 ---
 
 ## 🚀 Live Demo
 
-🌐 **Online Demo**
+🌐 **Streamlit App**
 
 https://worldcup-business-copilot-xwetqs4solcofyvkds9fkn.streamlit.app
 
----
+📂 **GitHub Repository**
 
-## 📌 Highlights
-
-- 📊 Interactive Business Intelligence Dashboard
-- 🌍 Historical World Cup Analytics
-- 🤖 AI-inspired Business Copilot
-- 📝 Executive Business Report Generator
-- 📈 Commercial Value Evaluation Model
-- 🔄 Offline + AI Architecture
-- ☁️ Streamlit Cloud Deployment
-- 🐍 Python + Plotly + Pandas
-
----
-
-# 📚 Table of Contents
-
-- Project Overview
-- Features
-- Dashboard Preview
-- Technology Stack
-- Project Architecture
-- Project Structure
-- Installation
-- Configuration
-- Deployment
-- Roadmap
-- Learning Outcomes
-- Author
-- License
+https://github.com/TonyCurlymoe/worldcup-business-copilot
 
 ---
 
 # 📖 Project Overview
 
-The **World Cup Business Intelligence Copilot** is an interactive business intelligence dashboard designed to analyze FIFA World Cup teams from a commercial perspective.
+World Cup Business Intelligence Copilot is an interactive analytics platform designed to evaluate FIFA World Cup teams from a commercial perspective rather than purely competitive performance.
 
-Unlike traditional football dashboards that focus solely on match statistics, this application evaluates each team's business potential using commercial indicators such as:
+The application combines structured team data, historical World Cup results, business value indicators, and AI-generated recommendations into a single business intelligence dashboard.
 
-- Market Size
-- Sponsor Exposure
-- Social Media Heat
-- Star Power
-- Performance Score
-- Advancement Probability
-- Business Value Score
+Users can explore sponsorship opportunities, compare commercial strengths, generate executive business reports, and analyze historical tournament trends.
 
-The project demonstrates how data analytics and AI can support sponsorship strategy, business decision-making, and commercial opportunity analysis.
+To improve reliability, the application supports both:
+
+- OpenAI-powered AI analysis
+- Offline business rule fallback mode (when an API key is unavailable)
+
+This allows the application to remain fully functional even without an active AI connection.
 
 ---
 
 # ✨ Features
 
-## 📊 Business Intelligence Dashboard
+### 📊 Interactive Dashboard
 
-- Interactive KPI dashboard
-- Regional filtering
-- Business Value filtering
-- Team profile analysis
-- Radar visualization
-- Commercial metrics
-
-                     +----------------------+
-                     |      Teams CSV       |
-                     +----------+-----------+
-                                |
-                                v
-                     +----------------------+
-                     |   Data Processing    |
-                     +----------+-----------+
-                                |
-          +---------------------+---------------------+
-          |                                           |
-          v                                           v
-+------------------------+               +------------------------+
-| Business Analytics     |               | Historical Analytics   |
-+-----------+------------+               +------------+-----------+
-            |                                         |
-            +-------------------+---------------------+
-                                |
-                                v
-                    +--------------------------+
-                    | AI Business Copilot      |
-                    | (OpenAI + Offline Mode)  |
-                    +-------------+------------+
-                                  |
-                                  v
-                    +--------------------------+
-                    | Commercial Report Engine |
-                    +-------------+------------+
-                                  |
-                                  v
-                    +--------------------------+
-                    | Streamlit Dashboard      |
-                    +--------------------------+
----
-
-## 🌍 Historical Analytics
-
-- Historical World Cup champions
-- Tournament timeline
-- Champion history
-- Historical performance visualization
+- Executive business overview
+- Commercial value ranking
+- Business opportunity identification
+- Radar chart visualization
+- Historical World Cup analytics
 
 ---
 
-## 🤖 Business Copilot
+### 🤖 AI Business Copilot
 
-The built-in Business Copilot supports questions such as:
-
-- Should Adidas sponsor France?
-- What are Argentina's commercial risks?
-- How valuable is Brazil?
-- How can England improve fan engagement?
-- What are Japan's business advantages?
-
-Business Copilot provides:
-
-- Sponsorship recommendations
-- Commercial value analysis
-- Business risk assessment
-- Fan engagement suggestions
-- Investment recommendations
+- Ask commercial questions about any team
+- AI-generated sponsorship recommendations
+- Commercial risk analysis
+- Fan engagement insights
+- Automatic offline fallback mode
 
 ---
 
-## 📝 Business Report Generator
+### 📄 Business Report
 
-Generate an executive-style report including:
+Generate executive-style commercial reports including:
 
 - Executive Summary
-- Commercial Opportunity
-- Sponsorship Recommendation
-- Risk Assessment
-- Strategic Recommendation
-
-Reports can be downloaded directly from the dashboard.
+- Investment Rating
+- Commercial Strengths
+- Sponsorship Opportunities
+- Business Risks
+- Historical Performance
 
 ---
 
-## 🔄 Offline + AI Mode
+### 📈 Historical Analytics
 
-The application supports two operating modes.
+Analyze previous FIFA World Cups with:
 
-### Offline Mode
-
-No API key required.
-
-Business recommendations are generated using predefined commercial rules.
-
-### AI Mode
-
-When an OpenAI API key is available, the application can generate AI-powered business insights.
-
-If AI is unavailable, the application automatically switches back to Offline Mode.
+- Tournament filtering
+- Historical match statistics
+- Team performance trends
 
 ---
 
 # 📸 Dashboard Preview
 
-> Screenshots will be updated after Version 1.0 release.
-
 ## Dashboard
 
 ![Dashboard](images/dashboard.png)
+
 ---
 
 ## Business Copilot
@@ -199,77 +103,35 @@ If AI is unavailable, the application automatically switches back to Offline Mod
 
 ---
 
-# 🛠 Technology Stack
+# 🏗️ System Architecture
 
-| Category | Technology |
-|-----------|------------|
-| Language | Python |
-| Dashboard | Streamlit |
-| Data Analysis | Pandas |
-| Visualization | Plotly |
-| AI | OpenAI API (Optional) |
-| Version Control | Git & GitHub |
-| Deployment | Streamlit Community Cloud |
+```mermaid
+flowchart TD
+
+A[Teams CSV] --> B[Data Processing]
+
+B --> C[Business Analytics]
+B --> D[Historical Analytics]
+
+C --> E[AI Business Copilot]
+D --> E
+
+E --> F[Commercial Report Generator]
+
+F --> G[Streamlit Dashboard]
+```
 
 ---
 
-## 🏗️ Project Architecture
+# 📁 Project Structure
 
 ```text
-                           User
-                             │
-                             ▼
-                  Streamlit Dashboard
-                             │
-      ┌──────────────────────┼──────────────────────┐
-      │                      │                      │
-      ▼                      ▼                      ▼
- Team Business Data   Historical World Cup Data   AI Business Copilot
-      │                      │                      │
-      │                      │          ┌───────────┴───────────┐
-      │                      │          ▼                       ▼
-      │                      │      OpenAI API          Offline Rule Engine
-      │                      │          │                       │
-      └──────────────────────┴──────────┴───────────────────────┘
-                             │
-                             ▼
-                  Business Report Generator
-                             │
-                             ▼
-                Interactive Business Insights
-```
-### Components
-
-- **Dashboard:** Interactive Streamlit interface for exploring World Cup teams.
-- **Business Analytics:** Calculates commercial value and sponsorship potential.
-- **Historical Analytics:** Displays historical World Cup performance and match insights.
-- **AI Business Copilot:** Answers business questions using OpenAI or an offline rule-based engine.
-- **Business Report Generator:** Produces structured commercial intelligence reports.
-
----
-
-## 🚀 Future Improvements
-
-Planned features for Version 2.0 include:
-
-- Team-to-team commercial comparison
-- Live FIFA match integration
-- AI-powered sponsorship recommendations
-- PDF export for commercial reports
-- User authentication
-- Database integration
-- Retrieval-Augmented Generation (RAG)
-- Interactive business forecasting
-
----
-
-## 📁 Project Structure
-
 worldcup-business-copilot/
 │
 ├── app.py
-├── requirements.txt
 ├── README.md
+├── requirements.txt
+├── LICENSE
 │
 ├── config/
 │
@@ -285,10 +147,11 @@ worldcup-business-copilot/
 ├── src/
 │   └── worldcup_business_copilot/
 │       ├── analytics.py
+│       ├── business_value.py
 │       ├── config.py
 │       ├── data.py
 │       ├── llm.py
-│       ├── business_value.py
+│       ├── worldcup_api.py
 │       └── app.py
 │
 └── tests/
@@ -298,31 +161,41 @@ worldcup-business-copilot/
 
 # ⚙️ Installation
 
-Clone the repository:
+Clone the repository
 
 ```bash
 git clone https://github.com/TonyCurlymoe/worldcup-business-copilot.git
-```
 
-Move into the project folder:
-
-```bash
 cd worldcup-business-copilot
 ```
 
-Install dependencies:
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it
+
+Windows PowerShell
+
+```powershell
+.venv\Scripts\activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Create your environment file:
+Create your environment file
 
 ```bash
 copy .env.example .env
 ```
 
-Run the application:
+Run the application
 
 ```bash
 streamlit run app.py
@@ -330,91 +203,86 @@ streamlit run app.py
 
 ---
 
-# 🔑 Configuration
+# 🔑 Environment Variables
 
-Optional environment variables:
+To enable AI-generated business recommendations, configure your OpenAI API key inside:
 
-```text
-OPENAI_API_KEY=
-OPENAI_MODEL=gpt-4o-mini
-
-TEAM_DATA_PATH=data/teams.csv
-HISTORICAL_DATA_PATH=data/historical_world_cup.csv
+```
+.env
 ```
 
-Without an API key, the dashboard automatically runs in Offline Mode.
+Example:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+OPENAI_MODEL=gpt-4o-mini
+```
+
+If no API key is provided, the application automatically switches to Offline Mode.
 
 ---
 
-# ☁️ Deployment
+# 🛠 Tech Stack
 
-This application is deployed using:
-
-- Streamlit Community Cloud
-- GitHub Actions (future)
-- GitHub Repository
-
-Every push to the **main** branch automatically updates the live application.
-
----
-
-# 🛣 Roadmap
-
-## Version 1.0 ✅
-
-- Interactive Dashboard
-- Business Value Model
-- Historical Analytics
-- Business Copilot
-- Offline Mode
-- Business Report
-- Cloud Deployment
+| Category | Technology |
+|-----------|------------|
+| Language | Python |
+| Dashboard | Streamlit |
+| Visualization | Plotly |
+| Data Analysis | Pandas |
+| AI | OpenAI API |
+| Version Control | Git |
+| Repository | GitHub |
+| Deployment | Streamlit Community Cloud |
 
 ---
 
-## Version 2.0
+# 💼 Business Use Cases
 
-- Team Comparison Dashboard
-- Dual Radar Charts
-- AI Comparison Report
-- Enhanced KPI Dashboard
+This project demonstrates how AI can support commercial decision-making in sports organizations.
 
----
+Example use cases include:
 
-## Version 3.0
-
-- Live Match Data
-- Real FIFA API
-- Player-level Analytics
-- Sponsorship ROI Prediction
-- GPT-5 Business Copilot
+- Sponsorship evaluation
+- Brand exposure analysis
+- Commercial opportunity assessment
+- Investment decision support
+- Executive reporting
+- Fan engagement analysis
 
 ---
 
-# 🎓 Learning Outcomes
+# 🚀 Future Improvements
 
-This project demonstrates practical experience in:
+Planned features for Version 2.0 include:
 
-- Business Intelligence
-- Data Analytics
-- Dashboard Development
-- Data Visualization
-- AI Integration
-- Cloud Deployment
-- Python Programming
-- Git Version Control
+- Team-to-team comparison
+- Live FIFA API integration
+- AI sponsorship recommendation engine
+- PDF report export
+- User authentication
+- Database integration
+- Retrieval-Augmented Generation (RAG)
+- Interactive business forecasting
+- Multi-language support
 
 ---
 
-# 👨‍💻 Author
+# 📦 Version
 
-**Wei Che (Tony)**
+Current Release
 
-Business Analytics
+**Version 1.0.0**
 
-San Francisco State University
+Released on GitHub Releases.
 
-GitHub
+---
+
+# 👤 Author
+
+**Wei Che**
+
+GitHub:
 
 https://github.com/TonyCurlymoe
 
