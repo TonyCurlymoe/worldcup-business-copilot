@@ -82,6 +82,39 @@ The project demonstrates how data analytics and AI can support sponsorship strat
 - Radar visualization
 - Commercial metrics
 
+                     +----------------------+
+                     |      Teams CSV       |
+                     +----------+-----------+
+                                |
+                                v
+                     +----------------------+
+                     |   Data Processing    |
+                     +----------+-----------+
+                                |
+          +---------------------+---------------------+
+          |                                           |
+          v                                           v
++------------------------+               +------------------------+
+| Business Analytics     |               | Historical Analytics   |
++-----------+------------+               +------------+-----------+
+            |                                         |
+            +-------------------+---------------------+
+                                |
+                                v
+                    +--------------------------+
+                    | AI Business Copilot      |
+                    | (OpenAI + Offline Mode)  |
+                    +-------------+------------+
+                                  |
+                                  v
+                    +--------------------------+
+                    | Commercial Report Engine |
+                    +-------------+------------+
+                                  |
+                                  v
+                    +--------------------------+
+                    | Streamlit Dashboard      |
+                    +--------------------------+
 ---
 
 ## 🌍 Historical Analytics
@@ -217,44 +250,48 @@ If AI is unavailable, the application automatically switches back to Offline Mod
 
 ## 🚀 Future Improvements
 
-Planned features for future versions include:
+Planned features for Version 2.0 include:
 
-- Real-time FIFA API integration
-- AI-generated SWOT analysis
-- Sponsorship ROI prediction
-- Multi-team comparison dashboard
-- PDF report export
-- Executive summary powered by GPT
-- Authentication and user accounts
-- Cloud database integration
-- AI sponsorship recommendation engine
+- Team-to-team commercial comparison
+- Live FIFA match integration
+- AI-powered sponsorship recommendations
+- PDF export for commercial reports
+- User authentication
+- Database integration
+- Retrieval-Augmented Generation (RAG)
+- Interactive business forecasting
 
 ---
 
-# 📂 Project Structure
+## 📁 Project Structure
 
-```
 worldcup-business-copilot/
 │
 ├── app.py
-├── README.md
 ├── requirements.txt
-├── .env.example
+├── README.md
+│
+├── config/
 │
 ├── data/
 │   ├── teams.csv
 │   └── historical_world_cup.csv
 │
+├── images/
+│   ├── dashboard.png
+│   ├── copilot.png
+│   └── report.png
+│
 ├── src/
 │   └── worldcup_business_copilot/
-│       ├── app.py
-│       ├── charts.py
-│       ├── business_value.py
+│       ├── analytics.py
 │       ├── config.py
 │       ├── data.py
-│       └── llm.py
+│       ├── llm.py
+│       ├── business_value.py
+│       └── app.py
 │
-└── images/
+└── tests/
 ```
 
 ---
