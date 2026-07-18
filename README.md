@@ -180,25 +180,54 @@ If AI is unavailable, the application automatically switches back to Offline Mod
 
 ---
 
-# 🏗 Project Architecture
+## 🏗️ Project Architecture
 
+```text
+                           User
+                             │
+                             ▼
+                  Streamlit Dashboard
+                             │
+      ┌──────────────────────┼──────────────────────┐
+      │                      │                      │
+      ▼                      ▼                      ▼
+ Team Business Data   Historical World Cup Data   AI Business Copilot
+      │                      │                      │
+      │                      │          ┌───────────┴───────────┐
+      │                      │          ▼                       ▼
+      │                      │      OpenAI API          Offline Rule Engine
+      │                      │          │                       │
+      └──────────────────────┴──────────┴───────────────────────┘
+                             │
+                             ▼
+                  Business Report Generator
+                             │
+                             ▼
+                Interactive Business Insights
 ```
-                    User
-                      │
-                      ▼
-              Streamlit Dashboard
-                      │
-        ┌─────────────┴─────────────┐
-        ▼                           ▼
- Business Analytics           Business Copilot
-        │                           │
-        ▼                           ▼
- Plotly Charts             Offline Rules / OpenAI
-        │                           │
-        └─────────────┬─────────────┘
-                      ▼
-             Business Report Output
-```
+### Components
+
+- **Dashboard:** Interactive Streamlit interface for exploring World Cup teams.
+- **Business Analytics:** Calculates commercial value and sponsorship potential.
+- **Historical Analytics:** Displays historical World Cup performance and match insights.
+- **AI Business Copilot:** Answers business questions using OpenAI or an offline rule-based engine.
+- **Business Report Generator:** Produces structured commercial intelligence reports.
+
+---
+
+## 🚀 Future Improvements
+
+Planned features for future versions include:
+
+- Real-time FIFA API integration
+- AI-generated SWOT analysis
+- Sponsorship ROI prediction
+- Multi-team comparison dashboard
+- PDF report export
+- Executive summary powered by GPT
+- Authentication and user accounts
+- Cloud database integration
+- AI sponsorship recommendation engine
 
 ---
 
