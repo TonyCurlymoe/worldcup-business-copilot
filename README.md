@@ -151,12 +151,14 @@ If AI is unavailable, the application automatically switches back to Offline Mod
 
 ## Dashboard
 
-![Dashboard](<img width="1437" height="796" alt="image" src="https://github.com/user-attachments/assets/ff0495c0-ace5-4b91-bb38-f517622078d4" />)
+![Dashboard](<img width="1425" height="664" alt="image" src="https://github.com/user-attachments/assets/e3230e1c-2f47-494f-8d35-79c4dcb86f4e" />
+)
 ---
 
 ## Business Copilot
 
-![Business Copilot](<img width="1435" height="791" alt="image" src="https://github.com/user-attachments/assets/ca7e8492-59ba-4186-ba53-74aff57d3600" />)
+![Business Copilot](<img width="1098" height="489" alt="image" src="https://github.com/user-attachments/assets/f119be3a-1425-48d7-8bd2-d59c0408bca3" />
+)
 
 ---
 
