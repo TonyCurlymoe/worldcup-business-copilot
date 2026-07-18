@@ -20,3 +20,15 @@ streamlit run app.py
 ```
 
 Add your OpenAI API key in `.env` if you want AI report generation.
+
+## Live Demo
+
+🌐 **Online Demo**
+
+https://worldcup-business-copilot-xwetqs4solcofyvkds9fkn.streamlit.app
+
+## Screenshot
+
+![Dashboard](<img width="1436" height="796" alt="image" src="https://github.com/user-attachments/assets/9376e529-6f12-446e-b316-eeef3242f321" />
+)
+
